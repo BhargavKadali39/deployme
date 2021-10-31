@@ -1,1 +1,211 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Added here to block scrolling due to svg bug*/
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+/* Card */
+main{
+    min-height: 100vh;
+    background: linear-gradient(202deg, rgb(40, 238, 228),rgb(57, 159, 228));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Glassmorphism */
+.glass{
+    background: slategray;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.192));
+    border-radius:40px;
+    backdrop-filter: blur(20px);
+    z-index: 2;
+}
+
+.pfp{
+    display: flex;
+    border-radius: 20%;
+    background-color: rgba(240, 248, 255, 0.274);
+}
+
+img,p{
+    margin: 15px;
+    border-radius: 50%;
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+}
+
+p{
+    margin-top: 100px;
+}
+
+h3{
+    font-family: monospace;
+    font-size: 30px;
+    margin-bottom: 10;
+}
+
+.items{
+    min-height: 50px;
+    min-width: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* To solve the default margin values in svg*/
+svg{
+    margin-top: -400px;
+    margin-bottom: -3px;
+}
+
+/* bubbles */
+.circle1,.circle2,.lil-bub1,.lil-bub2{
+    background: rgb(0, 128, 255);
+    background: linear-gradient(260deg,rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.25));
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: inset 12px 8px 20px 0px rgba(255, 255, 255, 0.555);
+}
+
+.circle1{
+    bottom: 5%;
+    left: 15%;
+    animation-name: move-circle1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transition: ease-in;
+}
+
+.circle2{
+    top: 5%;
+    right: 15%;
+    animation-name: move-circle2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transition: ease-in;
+}
+
+/* Bubble inside bubble */
+.lil-bub1,.lil-bub2{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 28%;
+    top: 20%;
+    opacity: 0.4;
+    box-shadow: inset -8px 14px 20px 0px rgb(255 255 255 / 83%);
+}
+
+
+/* Bottom bubble animation */
+@keyframes move-circle1 {
+    0% {
+        bottom: 2%;
+        left: 2%;
+    }
+    10%{
+        bottom: 5%;
+        left: 6%;
+    }
+    20% {
+        bottom: 8%;
+        left: 10%;
+    }
+    30%{
+        bottom: 9%;
+        left: 15%;
+    }
+    40% {
+        bottom: 11%;
+        left: 20%;
+    }
+    50%{
+        bottom: 9%;
+        left: 22%;
+    }
+    60% {
+        bottom: 11%;
+        left: 20%;
+    }
+    70%{
+        bottom: 9%;
+        left: 15%;
+    }
+    80%{
+        bottom: 8%;
+        left: 10%;
+    }
+    90%{
+        bottom: 5%;
+        left: 6%;
+    }
+    100% {
+        bottom: 2%;
+        left: 2%;
+    }
+}
+
+/* Top bubble animation */
+@keyframes move-circle2 {
+    0% {
+        top: 5%;
+        right: 2%;
+    }
+    10%{
+        top: 7%;
+        right: 6%;
+    }
+    20% {
+        top: 10%;
+        right: 10%;
+    }
+    30%{
+        top: 11%;
+        right: 15%;
+    }
+    40% {
+        top: 14%;
+        right: 20%;
+    }
+    50%{
+        top: 15%;
+        right: 22%;
+    }
+    60% {
+        top: 14%;
+        right: 20%;
+    }
+    70%{
+        top: 11%;
+        right: 15%;
+    }
+    80%{
+        top: 10%;
+        right: 10%;
+    }
+    90%{
+        top: 7%;
+        right: 6%;
+    }
+    100% {
+        top: 5%;
+        right: 2%;
+    }
+}
