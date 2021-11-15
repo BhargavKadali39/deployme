@@ -9,7 +9,6 @@ body{
 /* Added here to block scrolling due to svg bug*/
 html, body {
     margin: 0;
-    overflow: hidden;
 }
 
 /* Card */
